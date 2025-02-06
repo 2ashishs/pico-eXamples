@@ -31,7 +31,7 @@ endif()
 add_executable(bmp280_temp_on_oled bmp280_temp_on_oled.c)
 
 # pull in common dependencies
-target_link_libraries(bmp280_temp_on_oled pico_stdlib)
+target_link_libraries(bmp280_temp_on_oled hardware_i2c pico_stdlib)
 
 # enable/disable usb/uart
 pico_enable_stdio_uart(bmp280_temp_on_oled 0)
